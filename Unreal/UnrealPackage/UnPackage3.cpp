@@ -154,6 +154,16 @@ void FPackageFileSummary::Serialize3(FArchive &Ar)
 		if (Ar.ArLicenseeVer >= 28) Ar << unk30[0] << unk30[1] << unk30[2] << unk30[3] << unk30[4];
 	}
 #endif // APB
+#if XCOM
+	if (Ar.Game == GAME_XcomCS)
+	{
+		if (Ar.ArLicenseeVer >= 122)
+		{
+			int32 unk29, unk2D;
+			Ar << unk29 << unk2D;
+		}
+	}
+#endif // XCOM
 
 	Ar << ImportCount << ImportOffset;
 

@@ -440,6 +440,7 @@ enum EGame
 		GAME_LostPlanet3,
 		GAME_XcomB,
 		GAME_Xcom2,
+		GAME_XcomCS,
 		GAME_Thief4,
 		GAME_Murdered,
 		GAME_SOV,

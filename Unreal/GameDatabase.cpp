@@ -310,6 +310,7 @@ const GameInfo GListOfGames[] = {
 #	if XCOM
 		G("The Bureau: XCOM Declassified", xcom, GAME_XcomB),
 		G("XCOM 2", xcom2, GAME_Xcom2),
+		G("XCOM: Chimera Squad", xcomcs, GAME_XcomCS),
 #	endif
 #	if THIEF4
 		G("Thief", thief4, GAME_Thief4),
@@ -800,6 +801,7 @@ void FArchive::DetectGame()
 #if XCOM
 	if (ArVer == 845 && (ArLicenseeVer >= 101 && ArLicenseeVer <= 107))	SET(GAME_Xcom2);
 	if (ArVer == 849 && ArLicenseeVer == 32795)	SET(GAME_XcomB);
+	if (ArVer == 884 && ArLicenseeVer == 131)	SET(GAME_XcomCS);
 #endif
 #if FABLE
 	if ( (ArVer == 850 || ArVer == 860) && (ArLicenseeVer == 1017 || ArLicenseeVer == 26985) )	// 850 = Fable: The Journey, 860 = Fable Anniversary
